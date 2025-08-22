@@ -730,9 +730,10 @@ class GRPOTrainer(Trainer):
     # Maintenance note: This method is a copy-paste of the original `Trainer.get_train_dataloader` with only one line
     # modification. As a result, some parts of the method aren't relevant to GRPO, but we keep them to stay one line
     # apart from the super method, ensuring easier maintenance in the future.
-    def get_train_dataloader(self):
+    def get_train_dataloader(self, dataset=None):
         if self.train_dataset is None:
             raise ValueError("Trainer: training requires a train_dataset.")
+        if dataset is not None: self.train_dataset = dataset
 
         train_dataset = self.train_dataset
         data_collator = self.data_collator
