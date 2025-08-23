@@ -38,6 +38,7 @@ _uvicorn_available = _is_package_available("uvicorn")
 _vllm_available = _is_package_available("vllm")
 _vllm_ascend_available = _is_package_available("vllm_ascend")
 _joblib_available = _is_package_available("joblib")
+_rich_available = _is_package_available("rich")
 
 
 def is_deepspeed_available() -> bool:
@@ -70,6 +71,10 @@ def is_pydantic_available() -> bool:
 
 def is_requests_available() -> bool:
     return _requests_available
+
+
+def is_rich_available() -> bool:
+    return _rich_available
 
 
 def is_unsloth_available() -> bool:

@@ -16,7 +16,7 @@ __version__ = "0.18.2"
 
 from typing import TYPE_CHECKING
 
-from .import_utils import OptionalDependencyNotAvailable, _LazyModule, is_diffusers_available
+from .import_utils import OptionalDependencyNotAvailable, _LazyModule, is_diffusers_available, is_rich_available
 
 
 _import_structure = {
